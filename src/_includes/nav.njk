@@ -1,0 +1,12 @@
+{% set currentUrl %}{{ pages.url }}{% endset %}
+
+<nav>
+
+  <ul role="list">
+  {% for pages in collections.pages %}
+    <li>
+      <a href="{{ pages.url }}">{{ pages.data.title }} — {{ pages.date.toDateString() }}</a>
+    </li> </br>
+  {% endfor %}
+</ul>
+</nav>
